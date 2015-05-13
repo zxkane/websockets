@@ -12,7 +12,7 @@ var eventSchema = new mongoose.Schema({
   source: String,
   data: mongoose.Schema.Types.Mixed,
   websocket_processed: { type: Boolean, default: false }
-});
+}, { capped: 1024 });
 
 
 // Find the access token that belongs to the user (valid clients)
